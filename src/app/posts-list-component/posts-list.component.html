@@ -1,0 +1,23 @@
+<h1>All Posts</h1>
+<div class="row">
+    <ng-container *ngIf="(postsList | async) as posts; else loading">
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" *ngFor="let post of postsList | async ; let i = index">
+        <div class="card" >
+            <div class="card-header">
+                {{post.title | capitalize}}
+            </div>
+            <div class="card-block">
+                <div class="card-text">
+                  {{post.body | capitalize}}
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-sm btn-link text-left" (click)="goPostWComments(post.id)">VIEW</button>
+            </div>
+        </div>
+    </div>
+     </ng-container>
+    <ng-template #loading class="spinner spinner-inline">
+    Loading...
+    </ng-template>
+</div>

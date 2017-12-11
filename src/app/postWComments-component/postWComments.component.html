@@ -1,0 +1,24 @@
+           <ng-container *ngIf="(post | async) as post; else loading">
+            <h1>{{(post | async)?.title | capitalize}}</h1>
+            <h3>{{(post | async)?.body | capitalize}}</h3>
+           </ng-container>
+         <table class="table table-noborder">
+              <thead>
+                  <tr>
+                      <th class="left">Email</th>
+                      <th>Comment</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <ng-template ngFor let-comment [ngForOf]="comments | async">
+                  <tr>
+                      <td class="left"><a href="mailto:{{comment.email}}">{{comment.email}}</a></td>
+                      <td class="left">{{comment.body}}</td>
+                  </tr>
+                </ng-template> 
+              </tbody>
+          </table>    
+<ng-template #loading class="spinner spinner-inline">
+Loading...
+</ng-template>
+<button class="btn" (click)="goBack()">Back</button>
