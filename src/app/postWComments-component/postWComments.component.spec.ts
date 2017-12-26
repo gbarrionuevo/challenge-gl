@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostWCommentsComponent } from './postWComments.component';
+import { forumComponent } from './forum.component';
 
-describe('PostWCommentsComponent', () => {
-  let component: PostWCommentsComponent;
-  let fixture: ComponentFixture<PostWCommentsComponent>;
+describe('forumComponent', () => {
+  let component: forumComponent;
+  let fixture: ComponentFixture<forumComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostWCommentsComponent ]
+      declarations: [ forumComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostWCommentsComponent);
+    fixture = TestBed.createComponent(forumComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

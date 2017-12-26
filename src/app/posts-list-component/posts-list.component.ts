@@ -20,7 +20,7 @@ export class PostsListComponent implements OnInit {
       this.postsList = this.postsService.getPosts()
   }
 
-   goPostWComments(postId) {
+   goforum(postId) {
        this.router.navigate(['/post', postId]);
     }
 

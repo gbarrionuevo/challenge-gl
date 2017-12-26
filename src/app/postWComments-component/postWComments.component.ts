@@ -6,11 +6,11 @@ import { Subscription, Observable } from 'rxjs';
 import { Post } from '../services/post.model';
 
 @Component({
-  selector: 'app-postWComments',
-  templateUrl: './postWComments.component.html',
-  styleUrls: ['./postWComments.component.css']
+  selector: 'app-forum',
+  templateUrl: './forum.component.html',
+  styleUrls: ['./forum.component.css']
 })
-export class PostWCommentsComponent implements OnInit {
+export class forumComponent implements OnInit {
 
   post: any;
   comments: any;
